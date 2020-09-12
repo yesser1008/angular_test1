@@ -1,0 +1,15 @@
+<div class="container">
+ 
+  <p>hello {{name}}</p>
+<button class="btn btn-info" (click)="hello(name)">click</button>
+
+
+<hr>
+<ul  *ngFor="let bookname of booklist">
+  <li>
+{{bookname}}
+  </li>
+</ul>
+
+<div *ngIf="booklist.length==0" class="alert alert-warning">no books found</div>
+</div>

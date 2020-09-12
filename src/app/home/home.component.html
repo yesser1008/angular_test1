@@ -1,0 +1,41 @@
+<app-header ></app-header>
+
+<main role="main">
+<hr>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">People List</h1>
+  
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <button class="btn btn-info btn-lg my-2" href="#">Add</button>
+    <div *ngIf="booklist.length==0" class="alert alert-warning">no books found</div>
+    <table class="table table-striped custab">
+      <thead>
+      
+          <tr>
+              <th>ID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th class="text-center">Action</th>
+          </tr>
+      </thead>
+      
+              <tr *ngFor="let books of booklist">
+                  <td>{{books.id}}</td>
+                  <td>{{books.name}}</td>
+                  <td>{{books.pre}}</td>
+                  <td class="text-center"><button class="btn btn-info">Update</button><button class="btn btn-danger" (click)='delete(books)'>Delete</button> </td>
+              </tr>
+              
+      </table>
+  </div> <!-- /container -->
+
+</main>
+<app-footer></app-footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
